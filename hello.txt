@@ -1,0 +1,50 @@
+1- here we will use pnpm 
+2- acceternity ui 
+     - after running the command (pnpm dlx shadcn@latest add https://ui.aceternity.com/registry/3d-card.json) you will get a 3d-card.jsx in "@/components/ui/3d-card";  
+     - now we copy the code from acceternity ui (the code in aceternity ui is block of 3d-card.jsx) we can use it in our mycomponent folder to create good ui designs 
+
+3- dark mode lgate wakt themeprovide.jsx
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+
+export function ThemeProvider({ children, ...props }) {
+  const [mounted, setMounted] = useState(false);
+
+  // This useEffect will run once when the component mounts on the client
+  useEffect(() => {
+    setMounted(true); // Set the mounted state to true
+  }, []);
+
+  // If the component hasn't mounted yet, return null to avoid mismatched content
+  if (!mounted) return null;
+
+  return <NextThemesProvider {...props}>{children}</NextThemesProvider>;
+}
+
+
+4- use tailwind css aspect ratio 
+       -go to tailwind.config.js and add this 
+
+theme: {
+  	extend: {
+		aspectRatio: {
+			'retro': '4 / 3', // Custom aspect ratio
+			'mobile':'9/16', // custom aspect ratio 
+               // aur bhi aspect ratio classes add kr skte . 
+		  },
+
+5- the code for aspect ratio  and image
+     -
+  <div className="w-[30%] bg-fuchsia-500 aspect-mobile relative">
+  <Image 
+    alt="hello"
+    src={'/girl.jpg'}
+    fill
+    className="object-cover"  
+  />
+</div>
+
+
+
