@@ -48,7 +48,7 @@ function Navbar() {
 {/* logo area start */}
 <div className='flex items-center w-[40%] gap-1  '>
 <Avatar className='h-[2rem] w-[2rem]' >
-  <AvatarImage src="https://github.com/shadcn.png" />
+  <AvatarImage src="https://github.com/shadcn.png" className='object-cover' />
   <AvatarFallback>CN</AvatarFallback>
 </Avatar>
 <span className='text-sm md:text-xl font-semibold '>CompanyName</span>
