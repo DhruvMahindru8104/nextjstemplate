@@ -50,4 +50,26 @@ theme: {
        <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80" />
 is time pe jo section hoga component ka use bna do relative and aap bhi bhut sundar sundar aisi cheeze bna skte 
 
+7- is trh alignment theek hogi page ki 
+import Image from "next/image";
+import Hero from "@/components/ui/mycomponents/indexcomponents/Hero";
+import Features from "@/components/ui/mycomponents/indexcomponents/WhyChooseUs";
+import OurServices from "@/components/ui/mycomponents/indexcomponents/OurServices";
+import TeamSection from "@/components/ui/mycomponents/indexcomponents/Team";
+import GallerySection from "@/components/ui/mycomponents/indexcomponents/CarGallery";
+export default function Home() {
+  return (
+   <>
+   <Hero/>  
+   <Features/>
+   <OurServices/>
+   <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16 ">
+   <TeamSection/> # yeh wicked blocks se uthaya tha isluye alignment khrab thi but ise wrap kr diya humne div ki madad se jiske karan sb ek slignment mein ho gya hai 
+   </div>
+   <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-12 lg:px-5 space-y-16 ">
+   <GallerySection/>
+   </div>
+   </>
+  );
+}
 
